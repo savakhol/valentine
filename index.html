@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- NEW TITLE -->
+    <title>Настюша</title>
+    
+    <!-- NEW RED HEART FAVICON -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>❤️</text></svg>">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- INITIAL CLICK PROMPT -->
+    <div id="startPrompt" class="start-prompt">
+        <div class="prompt-content">
+            <h2>👆</h2>
+            <p>Нажми где хочешь чтобы начать</p>
+            <p>(смотри со звуком)</p>
+        </div>
+    </div>
+
+    <!-- VOLUME CONTROLLER -->
+    <div class="volume-container hidden-content" id="volumeControl">
+        <div class="volume-icon">
+            <i class="fas fa-music"></i>
+        </div>
+        <div class="volume-slider-wrapper">
+            <input type="range" id="volumeSlider" min="0" max="1" step="0.1" value="0.5" oninput="changeVolume(this.value)">
+        </div>
+    </div>
+
+    <!-- Container for Falling Hearts -->
+    <div id="heartsContainer" class="hearts-container"></div>
+
+    <!-- PAGE 1: Intro -->
+    <div id="page1" class="page active">
+        <audio id="song0" loop>
+            <source src="music/intro.mp3" type="audio/mpeg">
+        </audio>
+
+        <h1 class="title hidden-content">Привет, милая!😘</h1>
+
+        <img src="images/first.gif" alt="Cute Gif" class="gif hidden-content">
+        
+        <div class="text-box text-box-blue hidden-content">
+            <p>
+                Ну вот, это и есть то над чем я старался.🙂 Это сайт онлайн валентинка. Идею я увидел в тиктоке, но никогда еще сам не программировал, это для меня впервые)😁 Может конечно оно и не выглядит на столько часов сколько я на это потратил, но если тебе интересно, я тебе покажу потом сколько строчек кода это заняло…🫣 Когда я сказал что учил язык, я имел ввиду язык программирования HTML, который используется для создания сайтов. Естественно не без помощи чата гпт, но все же почти все сложное сделал я, с ним только консультироваться и спрашивал структуру кода. Я сейчас это пишу но потом еще надо придумать как это загрузить в интернет чтобы все работало… Надеюсь что все получится и ты это сейчас читаешь) Также надеюсь что ты знаешь что ты самое прекрасное что есть в нашем мире, Настя!🥺 В общем не буду тянуть, давай начинать, надеюсь тебе понравится!🫶 Чтобы начать тебе нужно просто нажать на стрелочку снизу. Вперед, любимая!✨ (Если музыка слишком громкая, есть ползунок громкости вверху слева).
+            </p>
+        </div>
+
+        <button id="nextBtn1" class="custom-btn hidden-content" onclick="goToPage2()">
+            <img src="images/start.png" alt="Next">
+        </button>
+    </div>
+
+    <!-- PAGE 2: Memories (Slideshow) -->
+    <div id="page2" class="page">
+        <audio id="song1" loop>
+            <source src="music/first.mp3" type="audio/mpeg">
+        </audio>
+        
+        <h1 class="title">67 причин почему я хочу чтобы ты была моей валентинкой:</h1>
+
+        <div class="slideshow">
+            <!-- 67 SLIDES TOTAL -->
+            <img src="images/slide1.jpg" class="slide active">
+            <img src="images/slide2.jpg" class="slide">
+            <img src="images/slide3.jpg" class="slide">
+            <img src="images/slide4.jpg" class="slide">
+            <img src="images/slide5.jpg" class="slide">
+            <img src="images/slide6.jpg" class="slide">
+            <img src="images/slide7.jpg" class="slide">
+            <img src="images/slide8.jpg" class="slide">
+            <img src="images/slide9.jpg" class="slide">
+            <img src="images/slide10.jpg" class="slide">
+            <img src="images/slide11.jpg" class="slide">
+            <img src="images/slide12.jpg" class="slide">
+            <img src="images/slide13.jpg" class="slide">
+            <img src="images/slide14.jpg" class="slide">
+            <img src="images/slide15.jpg" class="slide">
+            <img src="images/slide16.jpg" class="slide">
+            <img src="images/slide17.jpg" class="slide">
+            <img src="images/slide18.jpg" class="slide">
+            <img src="images/slide19.jpg" class="slide">
+            <img src="images/slide20.jpg" class="slide">
+            <img src="images/slide21.jpg" class="slide">
+            <img src="images/slide22.jpg" class="slide">
+            <img src="images/slide23.jpg" class="slide">
+            <img src="images/slide24.jpg" class="slide">
+            <img src="images/slide25.jpg" class="slide">
+            <img src="images/slide26.jpg" class="slide">
+            <img src="images/slide27.jpg" class="slide">
+            <img src="images/slide28.jpg" class="slide">
+            <img src="images/slide29.jpg" class="slide">
+            <img src="images/slide30.jpg" class="slide">
+            <img src="images/slide31.jpg" class="slide">
+            <img src="images/slide32.jpg" class="slide">
+            <img src="images/slide33.jpg" class="slide">
+            <img src="images/slide34.jpg" class="slide">
+            <img src="images/slide35.jpg" class="slide">
+            <img src="images/slide36.jpg" class="slide">
+            <img src="images/slide37.jpg" class="slide">
+            <img src="images/slide38.jpg" class="slide">
+            <img src="images/slide39.jpg" class="slide">
+            <img src="images/slide40.jpg" class="slide">
+            <img src="images/slide41.jpg" class="slide">
+            <img src="images/slide42.jpg" class="slide">
+            <img src="images/slide43.jpg" class="slide">
+            <img src="images/slide44.jpg" class="slide">
+            <img src="images/slide45.jpg" class="slide">
+            <img src="images/slide46.jpg" class="slide">
+            <img src="images/slide47.jpg" class="slide">
+            <img src="images/slide48.jpg" class="slide">
+            <img src="images/slide49.jpg" class="slide">
+            <img src="images/slide50.jpg" class="slide">
+            <img src="images/slide51.jpg" class="slide">
+            <img src="images/slide52.jpg" class="slide">
+            <img src="images/slide53.jpg" class="slide">
+            <img src="images/slide54.jpg" class="slide">
+            <img src="images/slide55.jpg" class="slide">
+            <img src="images/slide56.jpg" class="slide">
+            <img src="images/slide57.jpg" class="slide">
+            <img src="images/slide58.jpg" class="slide">
+            <img src="images/slide59.jpg" class="slide">
+            <img src="images/slide60.jpg" class="slide">
+            <img src="images/slide61.jpg" class="slide">
+            <img src="images/slide62.jpg" class="slide">
+            <img src="images/slide63.jpg" class="slide">
+            <img src="images/slide64.jpg" class="slide">
+            <img src="images/slide65.jpg" class="slide">
+            <img src="images/slide66.jpg" class="slide">
+            <img src="images/slide67.jpg" class="slide">
+        </div>
+
+        <!-- CAPTION CONTAINER -->
+        <div class="slide-caption" id="slideCaption"></div>
+
+        <div class="nav-buttons">
+            <button class="custom-nav-btn" onclick="goBackToPage1()">
+                <img src="images/back-btn.png" alt="Back">
+            </button>
+            <button class="custom-nav-btn" onclick="goToPage3()">
+                <img src="images/next-btn.png" alt="Next">
+            </button>
+        </div>
+    </div>
+
+    <!-- PAGE 3: The Question -->
+    <div id="page3" class="page">
+        <h1 class="question">Ты будешь моей валентинкой?</h1>
+        
+        <div class="buttons">
+            <button id="yesBtn" class="answer-btn" onclick="goToPage4()">
+                <img src="images/yes-btn.png" alt="Yes">
+            </button>
+            <button id="noBtn" class="answer-btn" onmouseover="growYes()" onclick="growYes()">
+                <img src="images/no-btn.png" alt="No">
+            </button>
+        </div>
+        
+        <div id="page3Nav" class="nav-buttons hidden-nav">
+             <button class="custom-nav-btn" onclick="goBackToPage2()">
+                <img src="images/back-btn.png" alt="Back">
+            </button>
+            <button class="custom-nav-btn" onclick="goToPage4()">
+                <img src="images/next-btn.png" alt="Next">
+            </button>
+        </div>
+    </div>
+
+    <!-- PAGE 4: Success -->
+    <div id="page4" class="page">
+        <audio id="song2" loop>
+            <source src="music/second.mp3" type="audio/mpeg">
+        </audio>
+        
+        <button id="hideContentBtn" class="hide-content-btn" onclick="togglePage4Content()">
+            <i class="fas fa-eye-slash"></i>
+        </button>
+
+        <div id="page4Content" class="fade-content">
+            <h1 class="title">УРАААААА!!🥹</h1>
+            <img src="images/final.gif" alt="Happy" class="gif">
+
+            <div class="text-box text-box-pink" style="margin-top: 20px;">
+                 <p>
+                    С днем Святого Валентина, милая!💕 Спасибо что согласилась быть моей валентинкой, для меня это правда очень важно, это первый раз когда я праздную этот праздник…🥺 Раньше я только смотрел как влюбленные дарят друг другу подарочки и делают приятно, потому сам никогда не был в отношениях в этот день. Мне очень повезло что ты хорошая и романтичная девочка, потому что ты меня вдохновляешь на то чтобы делать такие милости и при этом я получаю уйму удовольствия от процесса, предвкушая приятные эмоции любимой)🥰 Мне тоже очень сильно тебя не хватает солнце, и после поездки действительно стало тяжелее переживать расстояние, но я хочу чтобы ты знала что мы справимся, я это сердцем чувствую… Я люблю тебя сильнее всего, больше своей жизни, и чувствую что ты ты любишь меня точно также. Нет ничего крепче этих чувств зай, и пусть сейчас сложно, грустно и тоскливо, но ты помни что я всегда рядом, сон сном, здоровые привычки это хорошо и продуктивность тоже, но самое важное это общение друг с другом, я согласен. Поэтому я всегда буду рад поговорить с тобой, даже если это час ночи и тебе не спится.💘 Потому что ты самое дорогое что у меня есть, и я люблю слушать твой прекрасный голос и твои рассказы, а еще болтать с тобой на все темы мира! Ведь ты самая лучшая девушка на свете, спасибо большое что ты есть. И постарайся не грустить дорогая, думай о хорошем, сейчас найду работу и уже начну зарабатывать нам денежки на наше первое лето в Испании вместе)😁 Скоро уже весна, а там и до лета рукой подать, вот увидишь… Обязательно надо почаще общаться, это правда помогает, поэтому не переживай и звони мне в любое время любимая!😘 На фоне кстати мы с тобой на пляже сидим как ты могла заметить) Знаю что ты не особый любитель пикселей, но 3D анимацию я бы не осилил, хаахахахаха… Совсем скоро зай, будем сидеть в теплом песочке грея наши ножки и смотря на алый закат)🥹 Как я этого жду! Я тебя сильно сильно люблю Настя, никогда не забывай этого!❤️ Можешь нажать на кнопочку в правом верхнем углу чтобы скрыть все элементы страницы и будет такой красивый финал) Целую и надеюсь что я смог поднять тебе настроение как минимум на весь день!💋
+                </p>
+            </div>
+            
+            <div class="nav-buttons">
+                <button class="custom-nav-btn final-back-btn" onclick="goBackToPage3()">
+                    <img src="images/finish.png" alt="Back">
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
